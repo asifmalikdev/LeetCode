@@ -1,24 +1,29 @@
 class Solution():
     def addBinary(self, a, b):
-        left = len(a)
-        right = len(b)
-        i,j = 0,0
-        res = ""
+        left = len(a) - 1
+        right = len(b) - 1
+        res = []
         rem = 0
-        while i<left and j<right:
-            temp =rem + int(a[i]) + int(b[j])
-            rem = 0
-            if temp<2:
-                res = res + str(temp)
-            else:
-                rem = 1
-                res = res + "0"
-            i=i+1
-            j=j+1
 
-        return res
-a = "11"
-b = "1"
+        while left > -1 or right > -1:
+            temp = rem
+            if left > -1:
+                temp += int(a[left])
+            if right > -1:
+                temp += int(b[right])
+
+            res.append(str(temp % 2))  
+            rem = temp // 2            
+
+            left -= 1
+            right -= 1
+
+        if rem:
+            res.append('1')
+        return ''.join(reversed(res))
+
+a = "1010"
+b = "1011"
 obj = Solution()
 print(obj.addBinary(a,b))
-print("just test",1/2)
+
