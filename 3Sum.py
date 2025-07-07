@@ -3,10 +3,7 @@ class Solution():
         n=len(nums)
         counter = (n*(n-1)*(n-2))//6
         for i in range(counter):
-            
-
-
-
+            pass
 
 
 
