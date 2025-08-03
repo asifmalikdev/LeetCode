@@ -9,22 +9,18 @@ class Solution:
         #         new_num[num]=index
 
         def twoSum(self, nums, target):
+            print(nums)
             i=0
             j=len(nums)-1
             while j>i:
-                print("asif",i,j)
                 if nums[i] + nums[j] == target:
+                    print("hello")
                     return i,j
                 elif nums[i] + nums[j] > target:
                     j-=1
                 else:
                     i+=1
-                    print("hello")
 
-
-
-
-
-
+#5,2,11,7,15,2,2,45,45,23,4,2,345,6
 solution=Solution()
-print(solution.twoSum([3,2,4],6))
+print(solution.twoSum([5,2,11,7,15],9))
