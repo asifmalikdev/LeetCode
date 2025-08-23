@@ -2,10 +2,14 @@ from collections import Counter
 
 class Solution(object):
     def isPossibleDivide(self, nums, k):
-        # if (len(nums)-1) % k != 0:
-        #     return False
         freq = Counter(nums)
-        print(freq[2])
+        for num in sorted(freq):
+            while freq[num] > 0:
+                for j in range(num, num+k):
+                    if freq[j] <= 0:
+                        return False
+                    freq[j]-=1
+        return True
 
 
 nums = [3,2,1,2,3,4,3,4,5,9,10,11]
