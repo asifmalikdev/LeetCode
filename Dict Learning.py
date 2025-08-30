@@ -1,10 +1,13 @@
 from collections import Counter
+
 words = "hello asif this is me".split()
+print("printing first time",words)
 freq = {}
 words = "".join(words)
+print("printing second time",words)
 for letter in words:
-    freq[ch] = freq.get(ch, 0)+1
-print(words)
+    freq[letter] = freq.get(letter, 0) + 1
+print(freq)
 
 # for word in words:
 
