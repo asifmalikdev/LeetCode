@@ -1,14 +1,18 @@
 class Solution(object):
     def thirdMax(self, nums):
-        nums = set(nums)
-        if len(nums)>2:
-            return nums[3]
-        
-        else:
-            nums = list(nums)
-            return nums[-1]
-        
-nums = [1,2]
-[1,1,1,1,1,,2,2,2,2,2,2,3]
+        first = second = third = float('-inf')
+        for n in nums:
+            if n in (first, second, third):
+                continue
+            if n > first:
+                first, second, third = n, first, second
+            elif n > second:
+                second, third = n, second
+            elif n > third:
+                third = n
+        return third if third != float('-inf') else first
+
+
+nums = [1,1,1,1,1,2,2,2,2,2,2,3]
 obj = Solution()
 print(obj.thirdMax(nums))
