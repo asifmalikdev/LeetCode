@@ -1,0 +1,21 @@
+IF #0128 = "OM" THEN
+BEGIN
+$260.#tmpMorgageIdNumber = #0127:3;
+END
+
+
+IF #0128 = "3A" THEN
+BEGIN
+$260.#tmpMortgageInsuranceNumber = #0127:3;
+END
+
+IF #0128 = "3D" THEN
+BEGIN
+$260.#tmpServicerLoanNumber = #0127:3;
+END
+
+
+IF #0128 = "3E" THEN
+BEGIN
+$260.#tmpInvestorLoanNumber = #0127:3;
+END
