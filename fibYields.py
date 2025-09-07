@@ -14,5 +14,5 @@ class Solution():
     def fibSeries(self, num):
         a = 0
         b = 1
-        
+
 

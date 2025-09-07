@@ -2,11 +2,11 @@ class Solution:
     def fibSeries(self, num):
         a, b = 0, 1
         for _ in range(num):
-            yield a   # yield one number at a time
+            yield a   
             a, b = b, a + b
 
 obj = Solution()
-num = 10000
+num = 100000
 fib = obj.fibSeries(num)
 
 
