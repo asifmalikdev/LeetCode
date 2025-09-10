@@ -17,8 +17,8 @@ class Company:
                 clock_in_time[emp_id] = time_in_minutes
             elif action == "out":
                 if emp_id in clock_in_time:
-                    worked = time_in_minutes - clock_in_time[emp_id]
-                    dic[emp_id] = dic.get(emp_id, 0) + worked
+                    worked = time_in_minutes - clock_in_time[edmp_id]
+                    ic[emp_id] = dic.get(emp_id, 0) + worked
                     del clock_in_time[emp_id]
                     
         return {emp: round(total / 60, 2) for emp, total in dic.items()}

@@ -17,6 +17,8 @@ class Solution(object):
         return True if new_s == t else False
     
 
+    
+
 s = "egg"
 t = "add"
 obj = Solution()
