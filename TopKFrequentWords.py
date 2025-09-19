@@ -5,6 +5,7 @@ class Solution(object):
             dict1[word] = dict1.get(word, 0) + 1
         
         sorted_words = sorted(dict1.items(), key=lambda x: (-x[1], x[0]))
+        print(sorted_words)
         res = [item[0] for item in sorted_words[:k]]
         return res
 
