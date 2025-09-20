@@ -23,5 +23,5 @@ try:
     age = int(input("please enter your age"))
     result = obj.agecheck(age)
     print(result)
-except ValueError as e:
+except Exception as e:
     print("Error", e)

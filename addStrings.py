@@ -19,3 +19,13 @@ num2 = "123"
 
 obj = Solution()
 print(obj.addStrings(num1, num2))
+
+count = 0
+
+def increment():
+    print(count)
+    global count
+    count += 1
+
+increment()
+print(count)
