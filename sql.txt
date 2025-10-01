@@ -1,0 +1,12 @@
+Given two tables:
+1. employees (id, name, department_id, salary)
+2. departments (id, name, location)
+
+Write three different types of joins to get employee 
+information with their department details.
+
+
+select * from employees
+inner join departments
+on employees.department_id = departments.id
+
