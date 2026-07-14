@@ -15,4 +15,13 @@ lis3 = lis2
 
 
 exapmle_dict = dict()
-print(exapmle_dict)
+#print(exapmle_dict)    {}
+
+
+
+def greet(age, name):
+    print(name, age)
+
+age = 24
+name = "asif"
+greet(name, age)
