@@ -3,6 +3,7 @@ class Solution(object):
         if not strs:
             return ""
         strs.sort()
+        print(strs)
         shortest_word_size = len(strs[0])
         
         prefix = ""
@@ -15,3 +16,11 @@ class Solution(object):
             prefix = prefix+ current_char  
 
         return prefix
+
+
+strs = ["flower","flow","flight", "flee"]
+x = ["flower","flow","flight", "flee"]
+x.sort()
+print(x)
+obj = Solution()
+print(obj.longestCommonPrefix(strs))
