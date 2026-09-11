@@ -12,3 +12,5 @@ class Solution(object):
                 ans[right] = nums[n-1-i]
                 right-=1
         return ans
+
+print("hello")
