@@ -18,3 +18,22 @@ def recu_n_to_1():
     return   
 #recu_n_to_1()
 
+def recu_n_to_0(x:int)->int:
+    if x <1:
+        return "hello"
+    print(x)
+    x-=1
+    return recu_n_to_0(x)
+x = 10
+#print(recu_n_to_0(x))
+
+
+
+
+def bt_1_to_n(x:int)->int:
+    if x<1:
+        return
+    bt_1_to_n(x-1)
+    print(x)
+
+bt_1_to_n(10)
