@@ -12,7 +12,6 @@ class Solution:
                     ans += 1
                 else:
                     ans += 2
-        return ans
                     
         return ans
 
