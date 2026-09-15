@@ -36,4 +36,14 @@ def bt_1_to_n(x:int)->int:
     bt_1_to_n(x-1)
     print(x)
 
-bt_1_to_n(10)
+#bt_1_to_n(10)
+
+
+
+
+def bt_n_to_1(x:int)->int:
+    if x>10:
+        return
+    bt_n_to_1(x+1)
+    print(x)
+#bt_n_to_1(1)
