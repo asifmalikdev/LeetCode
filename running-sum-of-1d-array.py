@@ -9,3 +9,6 @@ class Solution:
 nums = [1,1,1,1,1]
 obj = Solution()
 print(obj.runningSum(nums))
+
+for i in range(2):
+    print(i)
