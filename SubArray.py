@@ -1,15 +1,17 @@
 class Solution:
-    def subArray(self, i, arr, sub_array):
+    def subArray(self, i, arr):
+        # Base case: reached the end of the array, counts as 1 valid subsequence
         if i >= len(arr):
-            print(sub_array)
-            return
-        sub_array.append(arr[i])
-        self.subArray(i + 1, arr, sub_array)
-        sub_array.pop()
-        self.subArray(i+1,arr, sub_array)
+            return 1
+        
+        # Total = (count if we include arr[i]) + (count if we exclude arr[i])
+        return self.subArray(i + 1, arr) + self.subArray(i + 1, arr)
+
 
 
 obj = Solution()
 arr = [1, 2, 3, 4]
 sub_array = []
-obj.subArray(0, arr, sub_array)
+counter = 0
+counter = obj.subArray(0, arr)
+print(counter)
