@@ -7,7 +7,12 @@ class Solution:
        
         
 
-s = ["h"]
+s = ["hellox"]
 print(len(s)//2)
-obj = Solution()
-print(obj.reverseString(s))
+#obj = Solution()
+#print(obj.reverseString(s))
+i = 3
+s = ["h","e","l","l","o"]
+print(-i-1)
+print(s[-i-1])
+print(s[-1])
