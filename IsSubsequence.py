@@ -10,7 +10,7 @@ class Solution(object):
 
 
 
-s = "abc"
+s = "abcf"
 t = "ahbgdc"
 obj = Solution()
 print(obj.isSubsequence(s,t))
