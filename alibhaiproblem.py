@@ -1,11 +1,15 @@
 
 x = [1, 2, 3]
 y = [1, 2, 3]
+z = x
 print(x == y)
 print(x is y) 
+print(x is z)
+print(z is x)
 
 a, b, c = [1, 2, 3]
 print(a, b, c)
+print("type of a is :",type(a))
 
 a = [1, 2, 3]
 b = a * 2
@@ -42,6 +46,7 @@ class solution():
         print("hello")
         for _ in range(10):
             self.x+=1  
+        print("insdie prac",x,self.x)
     print("after",x)
 
 obj  = solution()
