@@ -24,3 +24,34 @@ obj = Solution()
 s = "dog cat cat dog"
 p = "aaaa"
 print(obj.wordPattern(p,s))
+
+class A:
+    def __init__(self):
+        print("-> Entering A")
+        print("<- Leaving A")
+
+class B(A):
+    def __init__(self):
+        print("-> Entering B")
+        super().__init__()  # Who does this call? Let's trace it!
+        print("<- Leaving B")
+
+class C(A):
+    def __init__(self):
+        print("-> Entering C")
+        super().__init__()
+        print("<- Leaving C")
+
+class D(B,C):
+    def __init__(self):
+        print("-> Entering D")
+        super().__init__()
+        print("<- Leaving D")
+
+# --- Execution ---
+print("--- Printing the MRO of Class D ---")
+for cls in D.__mro__:
+    print(cls.__name__)
+
+print("\n--- Instantiating Object D ---")
+d_instance = D()
